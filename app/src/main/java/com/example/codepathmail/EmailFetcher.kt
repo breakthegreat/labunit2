@@ -1,3 +1,4 @@
+//Thibault Chezaud LAB2 CS388
 package com.example.codepathmail
 
 class EmailFetcher {
@@ -10,7 +11,7 @@ class EmailFetcher {
         fun getEmails(): MutableList<Email> {
             var emails : MutableList<Email> = ArrayList()
             for (i in 0..9) {
-                val email = Email(senders[i], title, summary, date)
+                val email = Email(senders[i], title, summary, date, false)
                 emails.add(email)
             }
             return emails
@@ -19,7 +20,7 @@ class EmailFetcher {
         fun getNext5Emails(): MutableList<Email> {
             var newEmails : MutableList<Email> = ArrayList()
             for (i in 10..14) {
-                val email = Email(senders[i], title, summary,date)
+                val email = Email(senders[i], title, summary,date,false)
                 newEmails.add(email)
             }
             return newEmails

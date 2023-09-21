@@ -1,5 +1,7 @@
+//Thibault Chezaud LAB2 CS388
 package com.example.codepathmail
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,6 +50,33 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
         holder.titleTextView.text = email.title
         holder.summaryTextView.text = email.summary
         holder.dateTextView.text = email.date
+
+        if (email.isRead) {
+            holder.senderTextView.setTextColor(Color.parseColor("#808080"))
+            holder.titleTextView.setTextColor(Color.parseColor("#808080"))
+            holder.summaryTextView.setTextColor(Color.parseColor("#808080"))
+
+        } else {
+            holder.senderTextView.setTextColor(Color.parseColor("#000000"))
+            holder.titleTextView.setTextColor(Color.parseColor("#000000"))
+            holder.summaryTextView.setTextColor(Color.parseColor("#000000"))
+        }
+
+        holder.itemView.setOnClickListener {
+
+            if (email.isRead) {
+                email.isRead = false
+                holder.senderTextView.setTextColor(Color.parseColor("#000000"))
+                holder.titleTextView.setTextColor(Color.parseColor("#000000"))
+                holder.summaryTextView.setTextColor(Color.parseColor("#000000"))
+            } else {
+                email.isRead = true
+                holder.senderTextView.setTextColor(Color.parseColor("#808080"))
+                holder.titleTextView.setTextColor(Color.parseColor("#808080"))
+                holder.summaryTextView.setTextColor(Color.parseColor("#808080"))
+            }
+
+        }
 
     }
 

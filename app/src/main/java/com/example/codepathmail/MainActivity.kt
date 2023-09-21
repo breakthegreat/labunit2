@@ -1,3 +1,4 @@
+//Thibault Chezaud LAB2 CS388
 package com.example.codepathmail
 
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         emailsRv.adapter = adapter
         emailsRv.layoutManager = LinearLayoutManager(this)
 
+
         findViewById<Button>(R.id.loadMoreBtn).setOnClickListener {
             val newEmails = EmailFetcher.getNext5Emails()
             (emails as MutableList<Email>).addAll(newEmails)
@@ -27,7 +29,6 @@ class MainActivity : AppCompatActivity() {
 
             // Fetch next 5 emails and display in RecyclerView
         }
-
 
 
     }
