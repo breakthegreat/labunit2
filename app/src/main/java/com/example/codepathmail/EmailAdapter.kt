@@ -14,6 +14,7 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
         val senderTextView: TextView
         val titleTextView: TextView
         val summaryTextView: TextView
+        val dateTextView: TextView
 
         // TODO: Create member variables for any view that will be set
         // as you render a row.
@@ -26,6 +27,7 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
             senderTextView = itemView.findViewById(R.id.senderTv)
             titleTextView = itemView.findViewById(R.id.titleTv)
             summaryTextView = itemView.findViewById(R.id.summaryTv)
+            dateTextView = itemView.findViewById(R.id.date)
         }
     }
 
@@ -45,6 +47,8 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
         holder.senderTextView.text = email.sender
         holder.titleTextView.text = email.title
         holder.summaryTextView.text = email.summary
+        holder.dateTextView.text = email.date
+
     }
 
     override fun getItemCount(): Int {
