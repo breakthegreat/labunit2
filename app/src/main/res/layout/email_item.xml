@@ -6,35 +6,54 @@
     android:padding="10dp">
 
     <TextView
-        android:id="@+id/titleTv"
+        android:id="@+id/summaryTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
 
+        android:fontFamily="sans-serif-light"
+        android:lines="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senderTv"
-        tools:text="Help on Assignment #2" />
+        app:layout_constraintTop_toBottomOf="@+id/titleTv"
+        tools:text="Have you been able to finish the latest assignment? I'm stuck on the 3rd step and don't quite know what's wrong." />
 
     <TextView
         android:id="@+id/senderTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Hedwig" />
 
     <TextView
-        android:id="@+id/summaryTv"
+        android:id="@+id/titleTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        
-        android:ellipsize="end"
-        android:lines="1"
 
+
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif-medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTv"
-        tools:text="Have you been able to finish the latest assignment? I'm stuck on the 3rd step and don't quite know what's wrong." />
+        app:layout_constraintTop_toBottomOf="@+id/senderTv"
+        tools:text="Help on Assignment #2" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="date"
+        app:layout_constraintBottom_toTopOf="@+id/titleTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toEndOf="@+id/senderTv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.692" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
